@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="posts">
+        {{#each model as |post|}}
+          <div class="post">
+            <h2>{{post.caption}}</h2>
+            <div class="post-detail">
+              <p>Comments: </p>
+              <p>Likes: </p>
+            </div>
+          </div>
+        {{else}}
+          <p>Sorry, no content on your feed.</p>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

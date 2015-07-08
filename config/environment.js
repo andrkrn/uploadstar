@@ -16,10 +16,25 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "'self'",
+      'connect-src': "'self' localhost:3000",
+      'img-src': "'self'",
+      'style-src': "'self' 'unsafe-inline'",
+      'media-src': "'self'"
     }
   };
 
   if (environment === 'development') {
+    ENV['simple-auth'] = {
+      authorizer: 'simple-auth-authorizer:devise'
+    },
+    ENV['simple-auth-devise'] = {
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/session'
+    }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
