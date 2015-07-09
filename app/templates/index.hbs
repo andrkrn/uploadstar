@@ -6,6 +6,7 @@
           <div class="post">
             <h2>{{post.caption}}</h2>
             <div class="post-detail">
+              <p>Author: {{link-to post._data 'user' post.user_id}}</p>
               <p>Comments: </p>
               <p>Likes: </p>
             </div>

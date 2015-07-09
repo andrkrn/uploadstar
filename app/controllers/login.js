@@ -5,7 +5,6 @@ export default Ember.Controller.extend({
   password: '',
 
   actions: {
-
     authenticate: function() {
       var that = this,
           data = that.getProperties('identification', 'password');

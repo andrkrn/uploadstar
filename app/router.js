@@ -12,7 +12,7 @@ Router.map(function() {
     this.route('posts.show', {path: '/:id'});
   });
 
-  this.resource('account', {path: '/u/:id'}, function() {
+  this.resource('user', {path: '/u/:id'}, function() {
 
   });
 });
