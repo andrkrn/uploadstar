@@ -30,10 +30,15 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     ENV['simple-auth'] = {
-      authorizer: 'simple-auth-authorizer:devise'
+      authorizer: 'simple-auth-authorizer:devise',
+      store: 'simple-auth-session-store:local-storage',
+      crossOriginWhitelist: ['*']
     },
     ENV['simple-auth-devise'] = {
-      serverTokenEndpoint: 'http://localhost:3000/api/v1/session'
+      serverTokenEndpoint: 'http://localhost:3000/api/v1/sessions',
+      identificationAttributeName: 'email',
+      resourceName: 'user',
+      tokenAttributeName: 'token'
     }
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
