@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
+      {{link-to 'New Post' 'posts.new' classNames='btn btn-default'}}
       <div class="posts">
         {{#each model as |post|}}
           <div class="post">
             <h2>{{post.caption}}</h2>
             <div class="post-detail">
-              <p>Author: {{link-to post._data 'user' post.user_id}}</p>
-              <p>Comments: </p>
-              <p>Likes: </p>
+              {{log post.user}}
+              <p>Author: {{link-to post.user.full_name 'user' post.user_id}}</p>
             </div>
           </div>
         {{else}}

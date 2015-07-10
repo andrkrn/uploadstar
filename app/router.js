@@ -9,7 +9,8 @@ Router.map(function() {
   this.route('login');
 
   this.resource('posts', function() {
-    this.route('posts.show', {path: '/:id'});
+    this.route('new');
+    this.route('show', {path: '/:id'});
   });
 
   this.resource('user', {path: '/u/:id'}, function() {
