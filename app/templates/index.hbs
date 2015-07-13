@@ -5,9 +5,10 @@
       <div class="posts">
         {{#each model as |post|}}
           <div class="post">
-            <h2>{{post.caption}}</h2>
+            <h2>
+              {{link-to post.caption 'posts.show' post.id}}
+            </h2>
             <div class="post-detail">
-              {{log post.user}}
               <p>Author: {{link-to post.user.full_name 'user' post.user_id}}</p>
             </div>
           </div>
