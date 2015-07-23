@@ -8,5 +8,11 @@ export default Ember.View.extend({
       done: function(e, data) {
       }
     })
+  },
+
+  willClearRender: function() {
+    var that = this;
+
+    if (that.$().find('.file-upload').is(':visible')) that.$().find('.file-upload').fileupload('destroy');
   }
 });
