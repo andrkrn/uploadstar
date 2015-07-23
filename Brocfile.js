@@ -19,5 +19,8 @@ var app = new EmberApp();
 app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
 
 app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
+app.import('vendor/assets/javascripts/jquery.ui.widget.js');
+app.import('vendor/assets/javascripts/jquery.iframe-transport.js');
+app.import('vendor/assets/javascripts/jquery.fileupload.js');
 
 module.exports = app.toTree();

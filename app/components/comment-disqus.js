@@ -27,7 +27,7 @@ export default Ember.Component.extend({
       that.reset();
     } else {
       that.set('timer', Ember.run.debounce(that, that.loadNewPostComments, 100));
-    };
+    }
   }.on('willInsertElement'),
 
   reset: function() {

@@ -1,10 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['current-user'],
   actions: {
     createPost: function() {
       var that = this,
-          data = that.getProperties('caption'),
+          data = that.getProperties('caption', 'attachment'),
           post = that.store.createRecord('post', data);
 
       post.save().then(function() {
