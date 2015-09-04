@@ -7,14 +7,21 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('login');
+  this.resource('sessions', function() {
+    this.route('new');
+  });
+  this.resource('registrations', function() {
+    this.route('new');
+  });
 
   this.resource('posts', function() {
     this.route('new');
     this.route('show', {path: '/:id'});
   });
 
-  this.resource('user', {path: '/u/:id'}, function() {
-
+  this.resource('users', function() {
+    this.route('show', {path: '/:id'});
+    this.route('edit', {path: '/:id/edit'});
   });
 });
 

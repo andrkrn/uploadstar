@@ -1,0 +1,7 @@
+{{#with model as |user|}}
+  <h2>{{user.full_name}}</h2>
+  <p>{{user.email}}</p>
+  {{#link-to 'users.edit' user}}
+    Edit
+  {{/link-to}}
+{{/with}}

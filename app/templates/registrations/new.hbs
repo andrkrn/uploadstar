@@ -1,0 +1,14 @@
+<form {{action "registerUser" on="submit"}} class="form">
+  <div class="form-group">
+    {{input type="text" value=full_name placeholder="Full Name" class="form-control"}}
+  </div>
+  <div class="form-group">
+    {{input type="email" value=email placeholder="Email" class="form-control"}}
+  </div>
+  <div class="form-group">
+    {{input type="password" value=password placeholder="Password" class="form-control"}}
+  </div>
+  <div class="form-group">
+    {{input type="submit" value="Register" class="btn btn-default"}}
+  </div>
+</form>
