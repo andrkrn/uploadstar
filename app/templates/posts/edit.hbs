@@ -1,0 +1,11 @@
+<form {{action "updatePost" on="submit"}} class="form">
+  <div class="form-group">
+    {{input type="text" value=model.caption placeholder="Caption" class="form-control"}}
+  </div>
+  <div class="form-group">
+    <input class="file-upload" name="post[attachment]" type="file">
+  </div>
+  <div class="form-group">
+    {{input type="submit" value="Submit" class="btn btn-default"}}
+  </div>
+</form>

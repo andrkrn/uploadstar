@@ -1,13 +1,8 @@
-{{#with model as |user|}}
-  <form {{action "updateUser" on="submit"}} class="form">
-    <div class="form-group">
-      {{input type="full_name" value=user.full_name placeholder="Full Name" class="form-control"}}
-    </div>
-    <div class="form-group">
-      {{input type="email" value=user.email placeholder="Email" class="form-control"}}
-    </div>
-    <div class="form-group">
-      {{input type="submit" value="Submit" class="btn btn-default"}}
-    </div>
-  </form>
-{{/with}}
+<form {{action "updateUser" on="submit"}} class="form">
+  <div class="form-group">
+    {{input type="text" value=model.full_name placeholder="Full Name" class="form-control"}}
+  </div>
+  <div class="form-group">
+    {{input type="submit" value="Submit" class="btn btn-default"}}
+  </div>
+</form>

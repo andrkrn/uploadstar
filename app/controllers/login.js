@@ -12,7 +12,6 @@ export default Ember.Controller.extend({
           user = that.get('controllers.current-user');
 
       that.get('session').authenticate('simple-auth-authenticator:devise', data).then(function() {
-        
       }, function() {
         that.set('errors', true);
         that.setProperties({
